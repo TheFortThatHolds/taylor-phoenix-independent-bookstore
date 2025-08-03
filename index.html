@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Phoenix's Independent Bookstore</title>
+    <meta name="description" content="Independent books by Taylor Phoenix - No corporate gatekeepers, no ISBN tyranny">
+    
+    <!-- No ISBN metadata - complete independence -->
+    <style>
+        /* SpiralLogic-enhanced emotional design */
+        :root {
+            --creator-primary: #2E5266;
+            --healing-green: #4A9B8E; 
+            --support-blue: #6B9BD2;
+            --gentle-purple: #A8B2D1;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--creator-primary) 0%, var(--gentle-purple) 100%);
+            color: #333;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .independence-badge {
+            background: var(--healing-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .werner-health-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--support-blue);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .spirallogic-support {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--healing-green);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .epub-reader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="independence-badge">📚 Independent Creator - No Corporate Control</div>
+        <h1>Taylor Phoenix</h1>
+        <p>Independent fantasy author writing stories that heal trauma through magical realism</p>
+        <p><strong>🏴 No ISBNs Required - Complete Creative Sovereignty 🏴</strong></p>
+    </header>
+    
+    <main>
+        <div class="book-grid">
+
+            <div class="book-card" data-book-id="shadows-of-healing">
+                <h3>Shadows of Healing</h3>
+                <p><strong>Genre:</strong> Fantasy</p>
+                <p>A magical realism novel about a young healer who discovers that trauma can be transformed into power</p>
+                
+                <!-- SpiralLogic emotional tags -->
+                <div class="emotional-tags">
+                    <strong>Emotional vibes:</strong> 
+                    healing, empowering, magical
+                </div>
+                
+                <div class="book-actions">
+                    <button onclick="previewBook('shadows-of-healing')" class="preview-btn">
+                        📖 Preview
+                    </button>
+                    <button onclick="buyBook('shadows-of-healing', 14.99)" class="buy-btn">
+                        💳 Buy $14.99
+                    </button>
+                    <button onclick="downloadSample('shadows-of-healing')" class="sample-btn">
+                        ⬇️ Free Sample
+                    </button>
+                </div>
+                
+                <!-- Available formats -->
+                <p><small>Available in: EPUB, PDF</small></p>
+            </div>
+
+            <div class="book-card" data-book-id="the-wounded-crown">
+                <h3>The Wounded Crown</h3>
+                <p><strong>Genre:</strong> Fantasy</p>
+                <p>When a kingdom's magic is broken by collective trauma, one person must heal a nation</p>
+                
+                <!-- SpiralLogic emotional tags -->
+                <div class="emotional-tags">
+                    <strong>Emotional vibes:</strong> 
+                    collective healing, leadership, courage
+                </div>
+                
+                <div class="book-actions">
+                    <button onclick="previewBook('the-wounded-crown')" class="preview-btn">
+                        📖 Preview
+                    </button>
+                    <button onclick="buyBook('the-wounded-crown', 16.99)" class="buy-btn">
+                        💳 Buy $16.99
+                    </button>
+                    <button onclick="downloadSample('the-wounded-crown')" class="sample-btn">
+                        ⬇️ Free Sample
+                    </button>
+                </div>
+                
+                <!-- Available formats -->
+                <p><small>Available in: EPUB, PDF</small></p>
+            </div>
+
+            <div class="book-card" data-book-id="whispers-from-void">
+                <h3>Whispers From the Void</h3>
+                <p><strong>Genre:</strong> Dark Fantasy</p>
+                <p>A short story collection exploring the space between pain and transformation</p>
+                
+                <!-- SpiralLogic emotional tags -->
+                <div class="emotional-tags">
+                    <strong>Emotional vibes:</strong> 
+                    deep, transformative, brave
+                </div>
+                
+                <div class="book-actions">
+                    <button onclick="previewBook('whispers-from-void')" class="preview-btn">
+                        📖 Preview
+                    </button>
+                    <button onclick="buyBook('whispers-from-void', 12.99)" class="buy-btn">
+                        💳 Buy $12.99
+                    </button>
+                    <button onclick="downloadSample('whispers-from-void')" class="sample-btn">
+                        ⬇️ Free Sample
+                    </button>
+                </div>
+                
+                <!-- Available formats -->
+                <p><small>Available in: EPUB, PDF</small></p>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Werner Medical Knowledge Integration - Universal Access -->
+    <div class="werner-health-widget" onclick="openWernerHealth()">
+        🏥 Health Support
+    </div>
+    
+    <!-- SpiralLogic Creator Support -->
+    <div class="spirallogic-support" onclick="openCreatorSupport()">
+        🌱 Creator Care
+    </div>
+    
+    <!-- Werner Health Modal -->
+    <div id="werner-modal" class="werner-modal" style="display: none;">
+        <div class="modal-content">
+            <span onclick="closeWernerHealth()" style="float: right; cursor: pointer; font-size: 1.5rem;">&times;</span>
+            <h2>🏥 Community Health Support</h2>
+            <p><em>"Medical knowledge belongs to the people" - David Werner</em></p>
+            
+            <div class="health-options">
+                <button onclick="accessHealthGuide()">📖 Where There Is No Doctor</button>
+                <button onclick="emergencyProtocols()">🚨 Emergency Protocols</button>
+                <button onclick="basicFirstAid()">🏥 Basic First Aid</button>
+                <button onclick="findLocalHelp()">📍 Find Local Healthcare</button>
+            </div>
+            
+            <p><small>Free community health information available to everyone, always.</small></p>
+            <p><strong>Werner's medical knowledge is never sold - always free as he intended.</strong></p>
+        </div>
+    </div>
+    
+    <!-- EPUB Reader Integration -->
+    <div id="epub-reader" class="epub-reader">
+        <div class="reader-controls">
+            <button onclick="closeReader()">← Back to Store</button>
+            <div class="reader-title"></div>
+        </div>
+        <div class="reader-content"></div>
+    </div>
+    
+    <script>
+        // Creator Store Functions
+        function previewBook(bookId) {
+            // Open EPUB reader with book preview
+            console.log('Opening preview for book:', bookId);
+            document.getElementById('epub-reader').style.display = 'block';
+            // Load EPUB preview here
+        }
+        
+        function buyBook(bookId, price) {
+            // Direct payment processing - creator keeps 100%
+            const paymentData = {
+                bookId: bookId,
+                price: price,
+                creator: 'Taylor Phoenix',
+                store: window.location.href
+            };
+            
+            // Integrate with Stripe, PayPal, or crypto
+            console.log('Processing payment:', paymentData);
+            alert(`Processing $` + price + ` payment for creator. No middleman fees!`);
+        }
+        
+        function downloadSample(bookId) {
+            // Download free sample
+            console.log('Downloading sample:', bookId);
+            alert('Free sample downloading - No registration required!');
+        }
+        
+        function closeReader() {
+            document.getElementById('epub-reader').style.display = 'none';
+        }
+        
+        // Werner Health Integration Functions
+        function openWernerHealth() {
+            document.getElementById('werner-modal').style.display = 'block';
+        }
+        
+        function closeWernerHealth() {
+            document.getElementById('werner-modal').style.display = 'none';
+        }
+        
+        function accessHealthGuide() {
+            // Link to Werner health knowledge
+            window.open('/werner-health-guide', '_blank');
+        }
+        
+        function emergencyProtocols() {
+            window.open('/werner-emergency-protocols', '_blank');
+        }
+        
+        function basicFirstAid() {
+            window.open('/werner-first-aid', '_blank');
+        }
+        
+        function findLocalHelp() {
+            // Geolocation-based local healthcare finder
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    window.open(`/find-healthcare?lat=${lat}&lon=${lon}`, '_blank');
+                });
+            } else {
+                window.open('/find-healthcare', '_blank');
+            }
+        }
+        
+        // SpiralLogic Creator Support Functions
+        function openCreatorSupport() {
+            // Emotional support for the creator
+            const supportOptions = [
+                "🌱 Feeling creative block?",
+                "💚 Need encouragement?", 
+                "🔥 Celebrating a success?",
+                "🤲 Want community connection?"
+            ];
+            
+            const choice = prompt("Creator support available:\n" + supportOptions.join("\n") + "\n\nWhat do you need?");
+            
+            if (choice) {
+                // SpiralLogic processing
+                console.log('Creator support requested:', choice);
+                alert('🌟 Your creativity matters. The community supports you. Keep creating!');
+            }
+        }
+        
+        // Analytics-free visitor tracking (just for creator benefit)
+        console.log('Independent bookstore loaded. No corporate surveillance here! 🏴');
+    </script>
+    
+    <style>
+        .werner-modal {
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+        }
+        
+        .health-options button {
+            display: block;
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            background: var(--support-blue);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .health-options button:hover {
+            opacity: 0.9;
+        }
+        
+        .preview-btn, .buy-btn, .sample-btn {
+            margin: 0.5rem;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .preview-btn { background: var(--gentle-purple); color: white; }
+        .buy-btn { background: var(--creator-primary); color: white; }
+        .sample-btn { background: var(--healing-green); color: white; }
+        
+        .emotional-tags {
+            background: #f0f8ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+    </style>
+</body>
+</html>
